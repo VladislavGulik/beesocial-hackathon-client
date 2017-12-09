@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Form, Input, Icon } from 'antd'
 
+import ProjectsList from '../../common/ProjectsList'
+
 const logo = require('../../../assets/logo-registration.png')
 
 const styles = {
@@ -64,6 +66,7 @@ class Auth extends Component {
                         Create
                     </Button>
                 </Link>
+                <ProjectsList></ProjectsList>
             </div>
         )
     }

@@ -4,7 +4,7 @@ import { Tag, Input, Tooltip, Icon } from 'antd';
 
 export default class Tags extends Component {
     state = {
-        tags: ['beesocial'],
+        tags: [],
         inputVisible: false,
         inputValue: '',
     };
@@ -45,7 +45,7 @@ export default class Tags extends Component {
                 {tags.map((tag, index) => {
                     const isLongTag = tag.length > 20;
                     const tagElem = (
-                        <Tag key={tag} closable={index !== 0} afterClose={() => this.handleClose(tag)}>
+                        <Tag key={tag} closable={index !== -1} afterClose={() => this.handleClose(tag)}>
                             {isLongTag ? `${tag.slice(0, 20)}...` : tag}
                         </Tag>
                     );
